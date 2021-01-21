@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import yfinance as yf
-
+from fbprophet import Prophet
 
 def yfinance_data(company_id):
 
@@ -21,8 +21,6 @@ def yfinance_data(company_id):
 
 
 def prophet_model(df, holidays=True):
-
-    from fbprophet import Prophet
 
     model_x = Prophet()
     if holidays == True:
