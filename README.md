@@ -1,6 +1,6 @@
 ## Python_projects
 
-Content related to:
+**Content related to:**
 
 - Data Analysis
 - Machine Learning
