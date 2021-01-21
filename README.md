@@ -1,7 +1,7 @@
-# Python_projects
+## Python_projects
 
 Content related to:
 
-*Data Analysis
-*Machine Learning
-*SQL connection
+- Data Analysis
+- Machine Learning
+- SQL connection
