@@ -25,7 +25,7 @@ def run_sql():
                  """
 
         cursor = connection.cursor()  # cursor
-        cursor.execute(query)  # not considering parameters
+        cursor.execute(query)  # without parameters
 
         # add Data to pd.DataFrame
         sql_data = pd.DataFrame([tuple(row) for row in cursor.fetchall()],
@@ -42,10 +42,10 @@ def run_sql():
 
     finally:
             if(connection):
-                connection.close() #closing the connection
+                connection.close() # close connection
 
 
-def saving_df():
+def saving_df(df):
     file_path = str(os.path.join(Path.home(), "Downloads")) # get Download folder
     currentDate = datetime.now().strftime("%Y-%m-%d__%Hh-%Mm")
     file_path_csv = file_path + '\Query_output' + '__' + currentDate + '.csv'
@@ -57,5 +57,5 @@ def saving_df():
 
 df = run_sql()
 
-saving_df()
+saving_df(df)
 

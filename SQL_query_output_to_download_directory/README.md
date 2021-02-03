@@ -3,9 +3,9 @@
 This python function runs Microsoft Server query and save the output in your Download directory regardless of your operating system
 
 
->Connect to Microsoft Server Database
->Run Queries
->Save csv output in Download directory (For Linux, Mac or Windows)
+-Connect to Microsoft Server Database
+-Run Queries
+-Save csv output in Download directory (For Linux, Mac or Windows)
 
 
 **Required libaries**: pyodbc, os, pandas, pathlib, matplotlib*

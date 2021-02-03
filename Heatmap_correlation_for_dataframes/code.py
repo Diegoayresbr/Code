@@ -10,14 +10,15 @@ def heatmap_correlation(df):
     correlation_x = df.corr(method='pearson')  # pearson correlation for columns in df
     print(correlation_x.to_string())
 
-    # create personalized color Maps – Good for replacing those 'OrRd'
+    # create personalized color Maps 
     color_list = ['#FF0000', '#FFFFFF', '#FF0000']
-    cmap_personalized = colors.LinearSegmentedColormap.from_list('mycmap', color_list, gamma=1.0)  #
+    cmap_personalized = colors.LinearSegmentedColormap.from_list('mycmap', color_list, gamma=1.0) 
 
     # creating a correlation heatmap with seaborn
     fig, ax = plt.subplots(nrows=1, ncols=1, dpi=120, figsize=(10, 6))
     sb.heatmap(correlation_x
-               , annot=True # , fmt='.2%'
+               , annot=True 
+               # , fmt='.2%'
                , cmap=cmap_personalized
                , center = 0, vmax = 1, vmin = -1
                , ax=ax

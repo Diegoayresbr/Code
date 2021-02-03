@@ -5,6 +5,15 @@
 *.pyc
 __pycache__/
 
+# All Videos
+*.mp4 
+
+# Folders Called 
+*/0_OLD/*
+
+# estimated models can be quite big for git
+*.pkl
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
