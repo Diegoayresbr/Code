@@ -3,6 +3,6 @@
 **Content related to:**
 
 - Data Analysis
-- Statistics
+- Statistical tests
 - Machine Learning
 - SQL with Python
