@@ -3,5 +3,6 @@
 **Content related to:**
 
 - Data Analysis
+- Statistics
 - Machine Learning
-- SQL connection
+- SQL with Python
