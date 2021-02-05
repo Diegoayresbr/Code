@@ -32,13 +32,13 @@ def normality_test(test_data):
 
 
     # Shapiro - Wilk test
-    W, p2 = stats.shapiro(test_data)  # test for normality
+    W, p2 = stats.shapiro(test_data) 
     print('\nShapiro-Wilk: W:{0:.4f}    P={1:.4f}'.format(W, p2))
     alpha = 0.05
     if p2 < alpha:  # (reject null hypothesis)
-        print('\033[1;30;41mNot Normal distribution\33[m')  # Data looks non-Gaussian
+        print('\033[1;30;41mNot Normal distribution\33[m') 
     else:
-        print('\033[1;30;46mNormal distribution\33[m')  # Data looks Gaussian (fail to reject null hypothesis)
+        print('\033[1;30;46mNormal distribution\33[m') 
 
     sns.set() # give a better layout
 
