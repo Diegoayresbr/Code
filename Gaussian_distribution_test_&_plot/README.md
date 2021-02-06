@@ -6,9 +6,9 @@
 - Anderson-Darling test
 - Quantile-Quantile Plot (Q-Q plot)
 - Kernel Density Estimation (KDE)
-- Gaussian distribution 
+- Gaussian distribution
 - Histogram
 
-**Required libaries**: *scipy, statsmodels, numpy, seaborn, math ,pandas, matplotlib*
+**Required libraries**: *scipy, statsmodels, numpy, seaborn, math , pandas, matplotlib*
 
 ![Image Detection](plot1.png)

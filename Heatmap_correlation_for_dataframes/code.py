@@ -36,7 +36,7 @@ def heatmap_correlation(df):
     ax.set_title('Correlation Matrix')
     plt.tight_layout()
     plt.show()
-
+    fig.savefig("plot1.png")
     return
 
 

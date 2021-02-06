@@ -1,4 +1,7 @@
-## Code
-Predict real time stock price is based on Yahoo finance stock price and Prophet forecasting time series model 
+## Time Series Prediction by fb-prophet
 
-**Required libaries**: *yfinance, fbprophet, pandas, matplotlib*
+>Predict real time stock price is based on Yahoo finance stock price and Prophet forecasting time series model 
+
+**Required libraries**: *yfinance, fbprophet, pandas, matplotlib*
+
+![Image Detection](plot1.png)

@@ -79,9 +79,8 @@ def normality_test(test_data):
 
     ax2.set_title("(QQ) Quantile-Quantile Plot")
 
-    plt.tight_layout()h
+    plt.tight_layout()
     plt.show()
-    fig.savefig('plot.png')
 
     return
 
