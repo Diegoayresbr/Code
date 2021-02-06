@@ -1,6 +1,6 @@
 ## Code
 
->This python function provides a good visualization to analyse correlation between columns in the a dataframe
+>This python function provides a good visualization to analyse correlation between columns in a dataframe
 
 - Pearson Correlation 
 - Create color map
