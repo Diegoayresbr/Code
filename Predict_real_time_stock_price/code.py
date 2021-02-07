@@ -3,6 +3,7 @@ import pandas as pd
 import yfinance as yf
 from fbprophet import Prophet
 
+
 def yfinance_data(company_id):
 
     tickers = yf.Ticker(company_id)
