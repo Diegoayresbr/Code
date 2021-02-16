@@ -209,7 +209,7 @@ def pairs_trading(df_w):
     ax2.tick_params(axis="x", rotation=90, labelsize=7, pad=8)
     an1 = ax2.annotate(
         "High " + df_data2.columns[0] + " _and_ Low " + df_data2.columns[1],
-        xy=(0.5, 0.97),
+        xy=(0.4, 0.97),
         xycoords="axes fraction",
         ha="left",
         va="top",
@@ -222,7 +222,7 @@ def pairs_trading(df_w):
 
     an2 = ax2.annotate(
         "High " + df_data2.columns[1] + " _and_ Low " + df_data2.columns[0],
-        xy=(0.5, 0.08),
+        xy=(0.4, 0.08),
         xycoords="axes fraction",
         ha="left",
         va="top",
