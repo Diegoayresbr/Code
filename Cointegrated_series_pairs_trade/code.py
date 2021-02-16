@@ -1,11 +1,15 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+import itertools
 
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
 from statsmodels.tsa.stattools import adfuller
+from statsmodels.tsa.vector_ar.vecm import coint_johansen
+
 
 def ADF_DickyFuller_test(df_data):
-    print("--"*40)
+    print("--" * 40)
     if not isinstance(df_data, pd.DataFrame):
         df_data = df_data.to_frame()
 
@@ -47,13 +51,11 @@ def ADF_DickyFuller_test(df_data):
 
 
 def cointegration_test_ADF_Resids_methodology(df_data1):
-    print("--"*40 ,"Cointegration Test")
+    print("--" * 40, "Cointegration Test")
     df_data = df_data1.copy()
 
     # ADF of Resids methodology
     print("\nADF of Resids methodology")
-
-    import itertools
 
     comb_list = list(itertools.combinations(df_data.columns, 2))
 
@@ -62,13 +64,9 @@ def cointegration_test_ADF_Resids_methodology(df_data1):
         series_2 = df_data.loc[:, str(x[1])]
 
         # OLS regression between variable > test if residual is stationary
-        import statsmodels.api as sm
-
         model = sm.OLS(series_1, series_2)
         model_fit = model.fit()
         residual_x = model_fit.resid
-
-        from statsmodels.tsa.stattools import adfuller
 
         test_adf = adfuller(residual_x, maxlag=None, autolag="AIC")
         print("Results ADF of Resids from OLS Regression : ", str(x))
@@ -111,7 +109,6 @@ def cointegration_test_ADF_Resids_methodology(df_data1):
 def johansen_cointegration_test(df, alpha=0.05):
     print("--" * 40)
     print("Johansen Cointegration Test")
-    from statsmodels.tsa.vector_ar.vecm import coint_johansen
 
     # Johanson's Cointegration
     johansen_test = coint_johansen(
@@ -182,13 +179,10 @@ def pairs_trading(df_w):
     # Plotting the rolling AVG
     rol_avg = df_data2.rolling(window=5).mean()
     ax3 = ax1.twinx()
-    rol_avg = rol_avg.rename(columns=lambda x: x+" rolling AVG")  # great to adjust column names
-    rol_avg.plot(
-        ax = ax3
-        , linestyle="--"
-        , alpha=0.9
-        , linewidth=0.9
-    )
+    rol_avg = rol_avg.rename(
+        columns=lambda x: x + " rolling AVG"
+    )  # great to adjust column names
+    rol_avg.plot(ax=ax3, linestyle="--", alpha=0.9, linewidth=0.9)
 
     leg1 = ax3.legend(
         loc="lower right", fontsize="x-small", title=None, bbox_to_anchor=None
@@ -227,10 +221,7 @@ def pairs_trading(df_w):
     )
 
     an2 = ax2.annotate(
-        "High "
-        + df_data2.columns[1]
-        + " _and_ Low "
-        + df_data2.columns[0],
+        "High " + df_data2.columns[1] + " _and_ Low " + df_data2.columns[0],
         xy=(0.5, 0.08),
         xycoords="axes fraction",
         ha="left",
@@ -261,8 +252,8 @@ df_x.set_index("date", inplace=True)
 
 ADF_DickyFuller_test(df_x)  # function to check stationarity
 
-johansen_cointegration_test(df_x) # johansen to check cointegration
+johansen_cointegration_test(df_x)  # johansen to check cointegration
 
-cointegration_test_ADF_Resids_methodology(df_x) # function to check cointegration
+cointegration_test_ADF_Resids_methodology(df_x)  # function to check cointegration
 
-pairs_trading(df_x) # Plot visualization
+pairs_trading(df_x)  # Plot visualization

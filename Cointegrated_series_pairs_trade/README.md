@@ -8,6 +8,6 @@
 - Pairs Trade 
 
 
-**Required libraries**: *statsmodels, numpy, pandas, matplotlib*
+**Required libraries**: *statsmodels, itertools, numpy, pandas, matplotlib*
 
 ![Image Detection](plot1.png)
