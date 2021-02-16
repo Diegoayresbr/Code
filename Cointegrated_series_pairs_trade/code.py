@@ -241,6 +241,7 @@ def pairs_trading(df_w):
     plt.grid(True, linestyle="--", color="c", alpha=0.4)
     fig_w.autofmt_xdate()
     plt.tight_layout(pad=3.0)
+    # plt.savefig("plot1.png")
     plt.show()
 
     return
