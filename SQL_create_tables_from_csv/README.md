@@ -4,8 +4,7 @@
 
 
 - Connect to Microsoft Server Database
-- Load csv until SQL Database
-- Save csv output in Download directory (For Linux, Mac or Windows)
+- Load csv into SQL Database
 
 
 **Required libraries**: pyodbc, sqlalchemy, urllib, pandas, time*
