@@ -8,6 +8,6 @@
 - Save csv output in Download directory (For Linux, Mac or Windows)
 
 
-**Required libraries**: pyodbc, sqlalchemy, pandas, time*
+**Required libraries**: pyodbc, sqlalchemy, urllib, pandas, time*
 
 >Do not forget to add the server name (server_name) , database name (dbname) and user login. (if required)

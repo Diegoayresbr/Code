@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 import pyodbc
-
+import urllib
 import time
 
 
@@ -23,15 +23,13 @@ def get_data(file, headers = []):
 
 
 def SQL_connection_engine():
-]
     server_name = "serve_name"
     db_name = "df_name"
     user_SQL = ""
     password_SQL = ""
 
-    # CREATE Engine - for loading the DataFrame
+    # CREATE Engine
     try:
-        import urllib
         params = urllib.parse.quote_plus("DRIVER={SQL Server Native Client 11.0};"
                                          "SERVER=" + str(server_name) + ";"
                                         "DATABASE=" + str(db_name) + ";"
