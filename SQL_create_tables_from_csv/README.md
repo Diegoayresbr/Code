@@ -9,4 +9,4 @@
 
 **Required libraries**: pyodbc, sqlalchemy, urllib, pandas, time*
 
->Do not forget to add the server name (server_name) , database name (dbname) and user login. (if required)
+>Do not forget to add the server name (server_name) , database name (dbname) and user login (if required).
